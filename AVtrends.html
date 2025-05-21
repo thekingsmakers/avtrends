@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Trends - Comprehensive Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+        }
+        
+        .contact-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            .mobile-menu.active {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+                    <i class="fas fa-chart-line mr-2"></i>
+                    AV Trends
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium">Home</a>
+                <a href="#services" class="nav-link font-medium">Services</a>
+                <a href="#about" class="nav-link font-medium">About Us</a>
+                <a href="#contact" class="nav-link font-medium">Contact</a>
+            </nav>
+            
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden absolute top-16 left-0 w-full bg-white shadow-lg py-4 px-6">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="font-medium py-2 border-b border-gray-100">Home</a>
+                <a href="#services" class="font-medium py-2 border-b border-gray-100">Services</a>
+                <a href="#about" class="font-medium py-2 border-b border-gray-100">About Us</a>
+                <a href="#contact" class="font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Your Trusted Business Partner</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">AV Trends offers comprehensive solutions across multiple industries with professionalism and excellence.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Our Services
+                </a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-blue-600 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Comprehensive Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide a wide range of professional services to meet all your business needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-building text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Building Maintenance Works</h3>
+                    <p class="text-gray-600 mb-4">Professional maintenance services to keep your facilities in optimal condition with our certified technicians and quality materials.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-file-certificate text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certified Documents Clearance</h3>
+                    <p class="text-gray-600 mb-4">Efficient processing and clearance of all your official documents through our network of government and private sector connections.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-concierge-bell text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hospitality Services</h3>
+                    <p class="text-gray-600 mb-4">Premium hospitality solutions including staffing, event management, and facility services tailored to your specific requirements.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-spa text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Women's Cosmetics & Beauty</h3>
+                    <p class="text-gray-600 mb-4">High-quality cosmetics, toiletries, beauty, and hair care products from trusted international brands at competitive prices.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-tshirt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Clothes Trading</h3>
+                    <p class="text-gray-600 mb-4">Wholesale and retail clothing distribution featuring the latest fashion trends and premium quality garments for all markets.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-hammer text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">General Contracting</h3>
+                    <p class="text-gray-600 mb-4">Complete contracting services for construction projects of all sizes, delivered with precision and adherence to timelines.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg p-6 md:col-span-2 lg:col-span-1 lg:col-start-2">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-language text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certified Translation Services</h3>
+                    <p class="text-gray-600 mb-4">Accurate and officially recognized translation of documents in multiple languages by certified professional translators.</p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="AV Trends Team" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About AV Trends</h2>
+                    <p class="text-gray-600 mb-4">Founded with a vision to provide comprehensive business solutions, AV Trends has grown into a trusted partner for companies across multiple industries.</p>
+                    <p class="text-gray-600 mb-4">Our team of professionals brings together decades of combined experience in various sectors, allowing us to deliver exceptional service quality across all our business divisions.</p>
+                    <p class="text-gray-600 mb-6">We pride ourselves on our commitment to excellence, integrity, and customer satisfaction in every project we undertake.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-600 mb-2">Our Mission</h4>
+                            <p class="text-gray-600 text-sm">To deliver comprehensive, high-quality business solutions that exceed client expectations through innovation and professionalism.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-600 mb-2">Our Vision</h4>
+                            <p class="text-gray-600 text-sm">To be the preferred business partner across all our service sectors, recognized for reliability and excellence.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition duration-300">
+                        Get in Touch <i class="fas fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2">7+</div>
+                    <div class="text-blue-100">Business Services</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2">15+</div>
+                    <div class="text-blue-100">Years Experience</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2">500+</div>
+                    <div class="text-blue-100">Satisfied Clients</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2">100%</div>
+                    <div class="text-blue-100">Commitment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from businesses that have partnered with AV Trends</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"AV Trends handled our building maintenance with exceptional professionalism. Their team is responsive, knowledgeable, and delivers quality work."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ahmed Al-Mansoori</h4>
+                            <p class="text-gray-500 text-sm">Facility Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The document clearance service saved us weeks of bureaucratic processes. AV Trends knows exactly how to navigate the system efficiently."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Fatima Al-Hashimi</h4>
+                            <p class="text-gray-500 text-sm">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Their beauty products distribution is top-notch. We've been able to source high-demand international brands through AV Trends at competitive prices."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Layla Mohammed</h4>
+                            <p class="text-gray-500 text-sm">Retail Chain Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions about our services? Contact us today and our team will be happy to assist you.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                            <select id="service" name="service" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500">
+                                <option value="">Select a service</option>
+                                <option value="Building Maintenance">Building Maintenance Works</option>
+                                <option value="Documents Clearance">Certified Documents Clearance</option>
+                                <option value="Hospitality">Hospitality Services</option>
+                                <option value="Cosmetics">Women's Cosmetics & Beauty</option>
+                                <option value="Clothing">Clothes Trading</option>
+                                <option value="Contracting">General Contracting</option>
+                                <option value="Translation">Certified Translation Services</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-blue-50 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Our Office</h4>
+                                    <p class="text-gray-600">Business District, Main Street<br>Dubai, United Arab Emirates</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Phone</h4>
+                                    <p class="text-gray-600">+971 4 123 4567</p>
+                                    <p class="text-gray-600">+971 50 123 4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">info@avtrends.ae</p>
+                                    <p class="text-gray-600">support@avtrends.ae</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Working Hours</h4>
+                                    <p class="text-gray-600">Sunday - Thursday: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Friday: Closed</p>
+                                    <p class="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="h-96 bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462565.2159432302!2d54.94755598750002!3d25.07575945537101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1689878888888!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-chart-line mr-2"></i> AV Trends
+                    </h3>
+                    <p class="text-gray-400">Comprehensive business solutions across multiple industries with professionalism and excellence.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Building Maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Document Clearance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Hospitality Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Beauty Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Clothing Trade</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 AV Trends. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send this data to a server
+                console.log('Form submitted:', { name, email, phone, service, message });
+                
+                // Show success message
+                alert('Thank you for your message! We will contact you soon.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
